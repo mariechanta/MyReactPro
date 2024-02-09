@@ -1,24 +1,14 @@
-import { Fragment } from "react";
-function ListContent() {
+// eslint-disable-next-line react-refresh/only-export-components
+function ListContent(){
+    const items= ["Elev Profil", "Kalender", "Kontaktlista", "Attendens", "Documentation", "Elev Assecement", "Elev lifeEvent", "BlogElevs", "clothers", "Education", "Plan"]
     return(
-        <Fragment>
-            <h1>Welcome to the Elev Atendens (EA)!</h1>
-            <ul className="list-content">
-                <li className="list-content"> Elev Profil</li>
-                <li className="list-content"> Kalender</li>
-                <li className="list-content">Kontaktlista</li>
-                <li className="list-content">Attendens</li>
-                <li className="list-content">Documentation</li>
-                <li className="list-content">Elev Assecement</li>
-                <li className="list-content">Elev life</li>
-                <li className="list-content">Event </li>
-                <li className="list-content">Blog</li>
-                <li className="list-content">Elevs clothers</li>
-                <li className="list-content"> Education</li>
-                <li className="list-content">Plan</li>
-            </ul>
-        </Fragment>
-    );
+        <>
+        <h1> Welcome to elev Attendens (EA)!</h1>
+        <p> List of content</p>
+        <ul className ="list-content">
+            {items.map ((item)=><li key= {item}>{item}</li>)}
+        </ul>
+        </>
+    )
 }
-
 export default ListContent;
