@@ -1,7 +1,11 @@
 // eslint-disable-next-line react-refresh/only-export-components
 function ListContent(){
     const items= ["Elev Profil", "Kalender", "Kontaktlista", "Attendens", "Documentation", "Elev Assecement", "Elev lifeEvent", "BlogElevs", "clothers", "Education", "Plan"]
-    
+    let selectedIndex= -1;
+    //Hook
+    const [selectedIndex, setSelectedIndex]= useSate(-1);
+    // variable (selectedIndex)
+    // updater function(setSelectedIndex)
     return(
         <>
         <h1> Welcome to elev Attendens (EA)!</h1>
