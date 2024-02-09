@@ -1,4 +1,4 @@
-// eslint-disable-next-line react-refresh/only-export-components
+import { useState } from "react";
 function ListContent(){
     const items= ["Elev Profil", "Kalender", "Kontaktlista", "Attendens", "Documentation", "Elev Assecement", "Elev lifeEvent", "BlogElevs", "clothers", "Education", "Plan"]
     let selectedIndex= -1;
