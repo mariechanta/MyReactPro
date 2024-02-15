@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
 
-function ListContent() {
+function ListContent(props) {
     const items = [
         'Elev Profil',
         'Kalender',
@@ -14,11 +14,13 @@ function ListContent() {
         'clothers',
         'Education',
         'Plan'
-    ];
+    ]
 
     return (
         <>
+            <img scr="" alt="backgrund image" />
             <h1> Welcome to elev Attendens (EA)!</h1>
+
             <p> List of content</p>
             <ul className="list-content">
                 {items.map((item) => (
@@ -26,6 +28,6 @@ function ListContent() {
                 ))}
             </ul>
         </>
-    );
+    )
 }
 export default ListContent
