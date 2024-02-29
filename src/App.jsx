@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import ElevList from './ElevList';
+import ElevForm from './ElevForm';
 
-function ListContent(props) {
-    const items = [
-        'Elev Profil',
-        'Kalender',
-        'Kontaktlista',
-        'Attendens',
-        'Documentation',
-        'Elev Assecement',
-        'Elev lifeEvent',
-        'BlogElevs',
-        'clothers',
-        'Education',
-        'Plan'
-    ]
+const ElevApp = () => {
+  const [elever, setElever] = useState([]);
 
-    return (
-        <>
-            <img scr="" alt="backgrund image" />
-            <h1> Welcome to elev Attendens (EA)!</h1>
+  useEffect(() => {
+    // to use hook
+  }, []);
 
-            <p> List of content</p>
-            <ul className="list-content">
-                {items.map((item) => (
-                    <li key={item}>{item}</li>
-                ))}
-            </ul>
-        </>
-    )
-}
-export default ListContent
+  const addElev = (elev) => {
+    setElever([...elever, elev]);
+  };
+
+  return (
+    <div>
+      <h1>Skola Eleverna närverande</h1>
+      <ElevList elever={elever} />
+      <ElevForm addElev={addElev} />
+    </div>
+  );
+};
+
+export default ElevApp;
