@@ -20,4 +20,4 @@ const ElevForm = ({ addElev }) => {
   );
 };
 
-export default StudentForm;
+export default ElevForm;
